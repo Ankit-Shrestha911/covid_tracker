@@ -9,12 +9,12 @@ const update=document.querySelector('#update');
 
 
 const res=new XMLHttpRequest();
-res.open('GET', "https://cors-anywhere.herokuapp.com/https://api.covid19india.org/data.json");
+res.open('GET', "https://data.covid19india.org/data.json");
 res.send();
 
 
 async function getCovidData() {
-    const res=await fetch("https://cors-anywhere.herokuapp.com/https://api.covid19india.org/data.json");
+    const res=await fetch("https://data.covid19india.org/data.json");
     const data=await res.json();
 
     const india=data.statewise[0];
